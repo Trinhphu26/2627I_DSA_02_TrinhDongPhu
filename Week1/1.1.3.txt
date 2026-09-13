@@ -1,0 +1,7 @@
+Các cặp thỏa mãn: (4, 0), (4, 5), (6, 4), (8, 9)
+
+- (4, 0): Cây gốc 4 (size 4) và cây gốc 0 (size 4) bằng kích thước nhau, theo quy ước gốc của q trỏ vào gốc của p nên 0 trỏ vào 4.
+- (4, 5): Cây 4 có size lớn hơn cây 5 (size 2), nên cây nhỏ hơn nối vào cây lớn hơn -> 5 trỏ vào 4.
+- (6, 4): 6 nằm trong cây gốc 4, 4 là gốc; thao tác này tương đương gộp 2 cây cùng size làm 0 trỏ vào 4.
+- (8, 9): Ban đầu hai nút rời nhau (size 1 = size 1), theo quy ước nút 9 trỏ vào nút 8.
+- Các cặp còn lại bị loại vì là cạnh bên trong cây con đã nối từ trước, hoặc nối ngược quy tắc kích thước.

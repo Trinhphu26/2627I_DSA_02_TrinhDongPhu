@@ -1,0 +1,10 @@
+parent[8] có thể nhận các giá trị: 0, 4, 8
+
+- Cây gốc 0 có size = 4.
+- Cây gốc 4 có size = 4.
+- Nhánh của nút 8 có size >= 2 (do 9 trỏ vào 8).
+Vì vậy:
+- parent[8] = 8: 8 là gốc riêng biệt.
+- parent[8] = 0: cây 8 nối vào gốc 0 (size 2 <= 4, hợp lệ).
+- parent[8] = 4: cây 8 nối vào gốc 4 (size 2 <= 4, hợp lệ).
+Các nút khác loại vì không phải nút gốc hoặc nối vào 9 sẽ tạo chu trình.

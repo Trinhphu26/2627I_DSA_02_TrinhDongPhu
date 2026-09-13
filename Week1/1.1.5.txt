@@ -1,0 +1,9 @@
+Cấu trúc cây:
+
+		 			 5
+		0			|||		7
+2	||	4	||	 6	|||		9
+	||	3	||	1|8	|||
+
+
+Không thể biểu diễn parent-link của một cấu trúc dữ liệu weighted quick union vì gốc con 0 có 7 nút (0, 1, 2, 3, 4, 6, 8) mà cây gốc 5 (chưa gộp 5) có 3 nút (5, 7, 8)
