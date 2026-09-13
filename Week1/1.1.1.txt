@@ -1,0 +1,28 @@
+n = 3
+leader = [0, 1, 2]
+Chuỗi phép toán:
+union(2, 0);
+union(0, 1);
+
+Chọn i = 0, j = 2.
+
+Giải thích:
+Ban đầu mảng leader = [0, 1, 2].
+
+1. Thực hiện union(2, 0):
+   - Mảng leader chuyển thành [0, 1, 0].
+   - Lúc này 0 và 2 đã thuộc cùng một tập hợp (chung leader là 0).
+
+2. Thực hiện union(0, 1) với code bị lỗi (p = 0, q = 1):
+   - Trước vòng lặp, leader = [0, 1, 0].
+   - Tại i = 0: leader[0] == leader[p] (0 == 0) -> ĐÚNG -> gán leader[0] = leader[q] = 1.
+   - Ngay lúc này, leader[0] đã bị đổi thành 1! (Kéo theo leader[p] giờ là 1).
+   - Tại i = 2: kiểm tra if (leader[2] == leader[p]) -> kiểm tra (0 == 1) -> SAI!
+   - Do đó leader[2] bị bỏ qua, không được cập nhật sang 1 mà vẫn giữ nguyên là 0.
+   - Kết quả mảng leader trở thành [1, 1, 0].
+
+3. Kiểm tra:
+   - 0 và 2 thuộc cùng một tập hợp, nhưng:
+     find(0) = leader[0] = 1
+     find(2) = leader[2] = 0
+   - find(0) != find(2) -> Thuật toán chạy sai.
